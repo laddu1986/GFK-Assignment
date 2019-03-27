@@ -1,0 +1,9 @@
+
+INFO Wed Mar 27 16:59:45 CET 2019: Opening url .........
+INFO Wed Mar 27 16:59:46 CET 2019: Opening url .........
+INFO Wed Mar 27 16:59:50 CET 2019: email and password are entered in the fields
+INFO Wed Mar 27 16:59:51 CET 2019: Sign in button below the passsword field is clicked
+INFO Wed Mar 27 17:00:03 CET 2019: Sign in is successfull
+INFO Wed Mar 27 17:00:03 CET 2019: Login is successful
+INFO Wed Mar 27 17:00:03 CET 2019: Correct username is showing at the top
+INFO Wed Mar 27 17:00:03 CET 2019: Verifying the Sign-out link

@@ -1,0 +1,83 @@
+#parse("/array.java.vm")
+#if ($packageName)
+package $packageName;
+
+#end
+import com.cucumber.listener.ExtentProperties;
+import com.cucumber.listener.Reporter;
+import com.hooks.BaseSteps;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import com.Logger;
+import com.cucumber.listener.Reporter;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.Augmenter;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import cucumber.api.SnippetType;
+
+import java.io.File;
+/**
+ * To run it from the Command Line Interface, the following codes/syntax are used.
+ * mvn clean test -Dcucumber.options="--tags @debug"                   //Only debug
+ * mvn clean test -Dcucumber.options="--tags @debug --tags @smoke"     //AND
+ * mvn clean test -Dcucumber.options="--tags @debug,@smoke"            //OR
+ */
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = {"$featureFile"},
+        plugin = #stringArray($plugins,"com.cucumber.listener.ExtentCucumberFormatter:",
+        "pretty:target/cucumber-test-report/cucumber-pretty.txt",
+        "html:target/cucumber-test-report",
+         "json:target/cucumber-test-report/cucumber-report.json",
+         "rerun:target/rerun.txt",
+         "junit:target/cucumber-test-report/test-report.xml"),
+        snippets=SnippetType.CAMELCASE,
+        monochrome = $monochrome,
+#if(!$featureFile.contains(".feature:") && $tags)
+        tags = #stringArray($tags),
+#end
+        glue = #stringArray($glue))
+public class $className {
+
+ //Logger logger =new Logger($className.class);
+
+    @BeforeClass
+    public static void beforeClass(){
+      //Do things
+       ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+       extentProperties.setReportPath("output/myreport.html");
+    }
+
+    @AfterClass
+    public static void afterClass(){
+              //Reporter
+             // Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
+             // Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
+             // Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
+             //Reporter.setSystemInfo("64 Bit", "Windows 8.1");
+            //  Reporter.setSystemInfo("3.8.1", "Selenium");
+            //  Reporter.setSystemInfo("3.5", "Maven");
+           //   Reporter.setSystemInfo("1.8.0", "Java Version");
+            //  Reporter.setTestRunnerOutput("Cucumber TestNg Runner");
+            //  Reporter.getExtentHtmlReport().setAppendExisting(true);
+    }
+
+
+
+
+}

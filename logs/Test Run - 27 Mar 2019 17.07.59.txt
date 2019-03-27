@@ -1,0 +1,21 @@
+
+INFO Wed Mar 27 17:07:59 CET 2019: ----------------------------------------------------------------------
+INFO Wed Mar 27 17:07:59 CET 2019: *************** Test Environment Set up ***************
+INFO Wed Mar 27 17:07:59 CET 2019: ***************    Starting Scenario    ***************
+INFO Wed Mar 27 17:07:59 CET 2019: *************** Scenario Name -- Sign up to the portal ***************
+INFO Wed Mar 27 17:07:59 CET 2019: ----------------------------------------------------------------------
+INFO Wed Mar 27 17:07:59 CET 2019: Opening url .........
+INFO Wed Mar 27 17:08:06 CET 2019: Opening url .........
+INFO Wed Mar 27 17:08:11 CET 2019: Clicking on Sign in link: Sign in
+INFO Wed Mar 27 17:08:15 CET 2019: Entering email username48045@gmail.com
+INFO Wed Mar 27 17:08:15 CET 2019: Clicking on button: Create an account
+INFO Wed Mar 27 17:08:15 CET 2019: Entering personal info
+INFO Wed Mar 27 17:08:19 CET 2019: Filling YOUR ADDRESS fields
+INFO Wed Mar 27 17:08:22 CET 2019: Clciking on Register button
+INFO Wed Mar 27 17:08:29 CET 2019: Appender URL is loaded correctly
+INFO Wed Mar 27 17:08:29 CET 2019: Correct username is showing at the top
+INFO Wed Mar 27 17:08:29 CET 2019: Verifying the Sign-out link
+INFO Wed Mar 27 17:08:29 CET 2019: MY ACCOUNT header is present
+INFO Wed Mar 27 17:08:29 CET 2019: Welcome message is present
+INFO Wed Mar 27 17:08:32 CET 2019: Test Environment Destroyed
+INFO Wed Mar 27 17:08:32 CET 2019: ----------------------------------------------------------------------

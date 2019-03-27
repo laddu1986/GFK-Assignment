@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gfk.qa.project</groupId>
+    <artifactId>GFK-Tests</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven-compiler.version>3.3</maven-compiler.version>
+        <selenium.version>3.8.1</selenium.version>
+        <webdrivermanager.version>2.1.0</webdrivermanager.version>
+        <cucumber.version>1.2.5</cucumber.version>
+        <testng.version>6.14.2</testng.version>
+        <poi.version>3.10-FINAL</poi.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- ************** Selenium and WebDriver Dependencies ************** -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
+        <!-- ************** End of Selenium and WebDriver Dependencies ************** -->
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- *************** TestNG & JUnit Dependencies *************** -->
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+        <!-- *************** End of TestNG & JUnit Dependencies *************** -->
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- *********** Hamcrest Assertion Library for test frameworks *********** -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <!-- ******** End of Hamcrest Assertion Library for test frameworks ******** -->
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- *************** All Cucumber Test Related Dependencies *************** -->
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java (Cucumber - Java) -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.5</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.5.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>2.0.2-beta</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit (Cucumber - JUnit) -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- TestNg Cucumber Runner -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- ******************** End of Cucumber Dependencies ******************** -->
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- *************** Extent Test Report Dependencies for Cucumber ***************** -->
+        <!-- The following 3 dependencies are used for advanced(Extent) cucumber reports -->
+        <dependency>
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>cucumber-extentsreport</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
+        <!-- To generate cucumber basic HTML/Json test reports in TestNg/Junit -->
+        <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>3.16.0</version>
+        </dependency>
+
+
+        <!-- To generate cucumber basic HTML/Json test reports in TestNg/JUnit with Maven -->
+        <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>3.16.0</version>
+        </dependency>
+
+
+        <!-- *************** End of Cucumber Test Report Dependencies *************** -->
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+        <!-- To send emails via selenium-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+        <!-- Cucumber Parallel Execution -->
+        <dependency>
+            <groupId>com.github.temyers</groupId>
+            <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <!-- *** Other Dependencies which aren't used in this project but could be useful *** -->
+
+        <!-- JUnit DataProvider -->
+        <dependency>
+            <groupId>com.tngtech.java</groupId>
+            <artifactId>junit-dataprovider</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+
+        <!-- JUnit Excel reader (Data Driven Testing) in Selenium -->
+        <dependency>
+            <groupId>net.sourceforge.jexcelapi</groupId>
+            <artifactId>jxl</artifactId>
+            <version>2.6.12</version>
+        </dependency>
+
+        <!-- Excel reader for POI (Data Driven Testing) in Selenium -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
+        <!-- _-_-_-_-_-_-_-_-_-_-_-_-_-_API Testing Dependencies-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- -->
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.networknt</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>0.1.24</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.6</version>
+        </dependency>
+
+        <!-- Below dependency is used to avoid unnecessary binaries -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.3.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- The following "build" is to run tests from the Command Line using certain commands/syntax -->
+    <!-- Test builds using CLI are needed for Jenkins integration (i.e., running test w/ Jenkins) -->
+
+    <!-- Adding maven compiler plugin and surefire plugin in Build is  mandatory  -->
+    <!-- **** The Compiler Plugin is used to compile the sources of the project **** -->
+    <!-- Enable the fork-count only if we want to run parallel, it will trigger #n no of JVM -->
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <!--
+                    <fork>true</fork>
+                    <executable>C:\Program Files\Java\jdk1.8.0_161\bin\javac</executable>
+                    -->
+                    <!-- Change path based on different computer -->
+                    <!-- Comment out "fork" and "executable" tags while running on Shift's jenkins (Uncomment for local jenkins) -->
+
+                </configuration>
+            </plugin>
+
+            <!-- The Surefire Plugin is used during the test phase of the build lifecycle to execute
+            the unit tests of an application. It generates reports in two different file formats:
+            1.XML files
+            2.Plain Text files  -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <configuration>
+                    <!-- To run Test in parallel -->
+                    <forkCount>3</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <includes>
+                        <include>**/*IT.class</include>
+                    </includes>
+                    <!--  <includes>
+                          <include>**/*Runner_TestNg.class</include>
+                      </includes>-->
+                </configuration>
+            </plugin>
+          <!--  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>resources</additionalClasspathElement>
+                    </additionalClasspathElements>
+                    <forkCount>2</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <includes>
+                        <include>**/*IT.java</include>
+                    </includes>
+                    <runOrder>alphabetical</runOrder>
+                    <argLine>-Duser.language=en</argLine>
+                    <argLine>-Xmx1024m</argLine>
+                    <argLine>-XX:MaxPermSize=256m</argLine>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>failsafe-integration-test</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+            <!-- Used for generating advance reports in cucumber -->
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>3.8.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Automation - GFK Tests</projectName>  <!-- Replace with project name -->
+                            <outputDirectory>target/cucumber-test-report/advanced-reports/</outputDirectory>
+                            <cucumberOutput>target/cucumber-test-report/cucumber-report.json
+                            </cucumberOutput> <!-- This json report is included in the BDDRunner class -->
+                            <buildNumber>1</buildNumber>
+                            <parallelTesting>false</parallelTesting>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Genarating TestRunners for Cucumber Tests in Parallel -->
+            <plugin>
+                <groupId>com.github.temyers</groupId>
+                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+                <version>4.2.0</version>
+                <executions>
+                    <execution>
+                        <id>generateRunners</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>generateRunners</goal>
+                        </goals>
+                        <configuration>
+                            <glue>
+                                com.steps,
+                                com.hooks
+                            </glue>
+                            <namingScheme>pattern</namingScheme>
+                            <namingPattern>{f}_{c}IT</namingPattern>
+                            <featuresDirectory>src/test/resources/features</featuresDirectory>
+                            <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
+                            <format>json,html,pretty</format>
+                           <!-- <tags>
+                                <tag>~@ignore</tag>
+                            </tags>-->
+                            <monochrome>true</monochrome>
+                            <useTestNG>false</useTestNG>
+                            <parallelScheme>FEATURE</parallelScheme>
+                            <customVmTemplate>
+                                src/main/resources/cucumber-custom-runner.vm
+                                <!--src/main/resources/cucumber-testng-runner.java.vm -->
+                            </customVmTemplate>
+                            <plugins>
+                                    <plugin>
+                                        <name>com.cucumber.listener.ExtentCucumberFormatter</name>
+                                        <extension>html</extension>
+                                        <outputDirectory>output/ParallelTestReport</outputDirectory>
+                                    </plugin>
+                            </plugins>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
+</project>

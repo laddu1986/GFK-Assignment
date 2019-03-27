@@ -1,0 +1,25 @@
+
+INFO Wed Mar 27 17:08:52 CET 2019: ----------------------------------------------------------------------
+INFO Wed Mar 27 17:08:52 CET 2019: *************** Test Environment Set up ***************
+INFO Wed Mar 27 17:08:52 CET 2019: ***************    Starting Scenario    ***************
+INFO Wed Mar 27 17:08:52 CET 2019: *************** Scenario Name -- Check out the order ***************
+INFO Wed Mar 27 17:08:52 CET 2019: ----------------------------------------------------------------------
+INFO Wed Mar 27 17:08:52 CET 2019: Opening url .........
+INFO Wed Mar 27 17:08:54 CET 2019: Opening url .........
+INFO Wed Mar 27 17:08:59 CET 2019: email and password are entered in the fields
+INFO Wed Mar 27 17:08:59 CET 2019: Sign in button below the passsword field is clicked
+INFO Wed Mar 27 17:09:12 CET 2019: Sign in is successfull
+INFO Wed Mar 27 17:09:12 CET 2019: Login is successful
+INFO Wed Mar 27 17:09:12 CET 2019: User is clicking on Women section
+INFO Wed Mar 27 17:09:14 CET 2019: User is selecting the product
+INFO Wed Mar 27 17:09:18 CET 2019: Clicking on add to cart
+INFO Wed Mar 27 17:09:19 CET 2019: Clicking on Proceed to checkout on an overlay
+INFO Wed Mar 27 17:09:22 CET 2019: Clicking..AutomationPracticePageModel.getBtnReviewProceedToCheckout().
+INFO Wed Mar 27 17:09:24 CET 2019: Clicking..AutomationPracticePageModel.getBtnProcessAddress().
+INFO Wed Mar 27 17:09:26 CET 2019: selecting the checkbox terms
+INFO Wed Mar 27 17:09:26 CET 2019: clicking ...AutomationPracticePageModel.getBtnProcessCarrier().
+INFO Wed Mar 27 17:09:28 CET 2019: clicking on the payment method...
+INFO Wed Mar 27 17:09:31 CET 2019: I confirm ...
+INFO Wed Mar 27 17:09:34 CET 2019: Verifying the url...
+INFO Wed Mar 27 17:09:34 CET 2019: Test Environment Destroyed
+INFO Wed Mar 27 17:09:34 CET 2019: ----------------------------------------------------------------------
